@@ -486,7 +486,7 @@ if (orderForm) {
     if (!name || !address || !phone) return;
 
     const lines = cart.map(item =>
-      `Product: ${item.name}\nQuantity: ${item.qty}\nSize: ${item.size}\nColor: ${item.color}\nPrice: ${formatPrice(item.price * item.qty)}`
+      `Product: ${item.name}\nQuantity: ${item.qty}\nProductID: ${item.id}\nSize: ${item.size}\nColor: ${item.color}\nPrice: ${formatPrice(item.price * item.qty)}`
     ).join("\n\n");
 
     const message =
