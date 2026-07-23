@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XOVA — Discover Your Own Style | Premium Fashion</title>
+<meta name="description" content="XOVA is a premium clothing brand for those who dress on their own terms. Shop new arrivals, best sellers and signature pieces — order instantly over WhatsApp.">
+<meta name="keywords" content="XOVA, clothing brand, premium fashion, dark luxury fashion, online clothing store, WhatsApp order">
+<meta name="author" content="XOVA">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="XOVA — Discover Your Own Style">
+<meta property="og:description" content="Premium fashion for everyone. Shop new arrivals, best sellers and signature pieces at XOVA.">
+<meta property="og:image" content="images/og-image.jpg">
+
+<!-- Favicon (inline, no extra file needed) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22white%22>X</text></svg>">
+
+<!-- Fonts & Icons -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div id="loading-screen" aria-hidden="true">
+  <div class="loader-mark">XOVA</div>
+</div>
+
+<!-- Ambient cursor glow (desktop) -->
+<div class="cursor-glow" id="cursor-glow"></div>
+
+<!-- ============================= NAVBAR ============================= -->
+<header id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">XO<span>VA</span></a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#about">About Us</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" data-cart-open aria-label="Open cart">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="cart-count">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#home">Home</a>
+  <a href="#products">Products</a>
+  <a href="#about">About Us</a>
+</div>
+
+<main>
+
+  <!-- ============================= HERO ============================= -->
+  <section class="hero" id="home">
+    <div class="hero-bg-glow" aria-hidden="true"></div>
+    <span class="hero-label-vert">XOVA — SS26 COLLECTION</span>
+
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow" data-reveal="up">New Season, New Rules</p>
+        <h1>
+          <span class="line"><span>Discover Your</span></span>
+          <span class="line"><span class="gradient-text">Own Style</span></span>
+        </h1>
+        <p class="sub" data-reveal="up" style="--i:1">
+          Premium fashion for everyone — considered pieces, honest pricing,
+          and an order flow that goes straight to a real person on WhatsApp.
+        </p>
+        <div class="hero-actions" data-reveal="up" style="--i:2">
+          <a href="#products" class="btn btn-primary">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#collections" class="btn btn-ghost">Explore Collection</a>
+        </div>
+        <div class="hero-stats" data-reveal="up" style="--i:3">
+          <div>
+            <div class="stat-num">120+</div>
+            <div class="stat-label">Curated Pieces</div>
+          </div>
+          <div>
+            <div class="stat-num">15K+</div>
+            <div class="stat-label">Happy Customers</div>
+          </div>
+          <div>
+            <div class="stat-num">4.8/5</div>
+            <div class="stat-label">Average Rating</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-media" data-reveal="zoom">
+        <img src="images/hero.png" alt="XOVA signature look — tailored jacket on a dark studio backdrop" loading="lazy">
+        <div class="hero-media-tag">
+          <span class="name">Droup Shoulder</span>
+          <span class="price">৳499</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-cue" aria-hidden="true">
+      <span>SCROLL</span>
+      <div class="dot-track"></div>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Free Styling Advice</span>
+      <span>Order via WhatsApp</span>
+      <span>New Drops Weekly</span>
+      <span>Nationwide Delivery</span>
+      <span>Free Styling Advice</span>
+      <span>Order via WhatsApp</span>
+      <span>New Drops Weekly</span>
+      <span>Nationwide Delivery</span>
+    </div>
+  </div>
+
+  <!-- ============================= PRODUCTS ============================= -->
+  <section class="section-pad" id="products">
+    <div class="container">
+      <div class="section-head" data-reveal="up">
+        <div>
+          <p class="eyebrow">The Edit</p>
+          <h2>Shop The Collection</h2>
+          <p>Every piece stored in one simple array — filter, search, and add to cart instantly.</p>
+        </div>
+        <span id="results-count" style="color:var(--c-text-faint); font-size:0.85rem; white-space:nowrap;"></span>
+      </div>
+
+      <div class="toolbar" data-reveal="up">
+        <div class="filter-chips">
+          <button class="chip active" data-filter="All">All</button>
+          <button class="chip" data-filter="T-Shirts">T-Shirts</button>
+          <button class="chip" data-filter="Pants">Pants</button>
+          <button class="chip" data-filter="Shirts">Shirts</button>
+        </div>
+        <div class="search-wrap">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="search" id="product-search" placeholder="Search products…" aria-label="Search products">
+        </div>
+      </div>
+
+      <div class="product-grid" id="product-grid"><!-- rendered by script.js --></div>
+
+      <div class="load-more-wrap">
+        <button class="btn btn-ghost" id="load-more-btn">Load More <i class="fa-solid fa-arrow-down"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= FEATURED COLLECTIONS ============================= -->
+  <section class="section-pad" id="collections" style="padding-top:0;">
+    <div class="container">
+      <div class="section-head" data-reveal="up">
+        <div>
+          <p class="eyebrow">Curated For You</p>
+          <h2>Featured Collections</h2>
+        </div>
+      </div>
+      <div class="collections-grid">
+        <a class="collection-card" href="#products" data-reveal="zoom">
+          <img src="images/collection1.jpeg" alt="New Arrivals collection" loading="lazy">
+          <div class="collection-label">
+            <p class="eyebrow">Just Landed</p>
+            <h3>New Arrivals</h3>
+            <a href="#products">Shop New Arrivals →</a>
+          </div>
+        </a>
+        <a class="collection-card" href="#products" data-reveal="zoom" style="--i:1">
+          <img src="images/collection2.jpeg" alt="Best Sellers collection" loading="lazy">
+          <div class="collection-label">
+            <p class="eyebrow">Customer Favorites</p>
+            <h3>Best Sellers</h3>
+            <a href="#products">Shop Best Sellers →</a>
+          </div>
+        </a>
+        <a class="collection-card" href="#products" data-reveal="zoom" style="--i:2">
+          <img src="images/collection3.jpeg" alt="Everyday Essentials collection" loading="lazy">
+          <div class="collection-label">
+            <p class="eyebrow">Everyday</p>
+            <h3>Essentials</h3>
+            <a href="#products">Shop Essentials →</a>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= OFFER BANNER ============================= -->
+  <section class="section-pad" style="padding-top:0;">
+    <div class="container">
+      <div class="offer-banner" data-reveal="zoom">
+        <p class="eyebrow" style="justify-content:center;">Limited Time</p>
+        <h2>End Of Season <span class="gradient-text">Sale</span></h2>
+        <p>Up to 30% off selected pieces. Message us on WhatsApp to claim your code.</p>
+        <div class="offer-code"><i class="fa-solid fa-tag"></i> XOVA30</div>
+        <div>
+          <a href="#products" class="btn btn-primary">Shop The Sale</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= ABOUT ============================= -->
+  <section class="section-pad about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-media" data-reveal="left">
+          <img src="images/about.jpeg" alt="Behind the scenes at XOVA studio" loading="lazy">
+          <div class="about-media-float">
+            <div class="num">08+</div>
+            <div class="lbl">Years Crafting<br>Style</div>
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <p class="eyebrow" data-reveal="right">Who We Are</p>
+          <h2 style="margin-bottom: var(--sp-md);" data-reveal="right" style="--i:1">Fashion Built On <span class="gradient-text">Intention</span></h2>
+          <p class="lead" data-reveal="right" style="--i:2">
+            XOVA is a clothing brand for people who dress with purpose. We design
+            in small batches, favor considered fabrics over fast trends, and keep
+            ordering as simple as sending a message.
+          </p>
+
+          <div class="about-cards" data-reveal="right" style="--i:3">
+            <div class="about-card">
+              <i class="fa-solid fa-bullseye"></i>
+              <h4>Our Mission</h4>
+              <p>Make premium fashion feel personal, accessible, and honest.</p>
+            </div>
+            <div class="about-card">
+              <i class="fa-solid fa-gem"></i>
+              <h4>Why Choose XOVA</h4>
+              <p>Small-batch drops, real fabrics, and a human on the other end of every order.</p>
+            </div>
+          </div>
+
+          <div class="timeline" data-reveal="right" style="--i:4">
+            <div class="timeline-item">
+              <div class="year">2018</div>
+              <h4>XOVA Was Founded</h4>
+              <p>Started as a small studio designing minimalist essentials.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="year">2021</div>
+              <h4>First Flagship Collection</h4>
+              <p>Launched our signature tailoring line, defining the XOVA silhouette.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="year">2026</div>
+              <h4>Fully Digital, Fully Personal</h4>
+              <p>Every order now goes straight to our team over WhatsApp.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= COUNTERS ============================= -->
+  <section class="section-pad" style="padding-block: var(--sp-xl);">
+    <div class="container">
+      <div class="counters">
+        <div class="counter-item" data-reveal="up">
+          <div class="counter-num" data-count="15000" data-suffix="+">0</div>
+          <div class="counter-label">Customers Styled</div>
+        </div>
+        <div class="counter-item" data-reveal="up" style="--i:1">
+          <div class="counter-num" data-count="120" data-suffix="+">0</div>
+          <div class="counter-label">Pieces In Store</div>
+        </div>
+        <div class="counter-item" data-reveal="up" style="--i:2">
+          <div class="counter-num" data-count="64" data-suffix="">0</div>
+          <div class="counter-label">Cities Delivered To</div>
+        </div>
+        <div class="counter-item" data-reveal="up" style="--i:3">
+          <div class="counter-num" data-count="8" data-suffix="">0</div>
+          <div class="counter-label">Years In Fashion</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= TESTIMONIALS ============================= -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="section-head" data-reveal="up">
+        <div>
+          <p class="eyebrow">Fashion Icons Say</p>
+          <h2>Loved By Our Customers</h2>
+        </div>
+      </div>
+      <div class="testimonial-track-wrap" data-reveal="up">
+        <div class="testimonial-track">
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="quote">The tailoring is unreal for the price. Ordering on WhatsApp was so much easier than any checkout page.</p>
+            <div class="testimonial-person">
+              <div class="avatar-ring">R</div>
+              <div>
+                <div class="who">Rafi Ahmed</div>
+                <div class="role">Verified Buyer</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="quote">XOVA has completely changed how I think about my wardrobe. Every piece feels intentional.</p>
+            <div class="testimonial-person">
+              <div class="avatar-ring">N</div>
+              <div>
+                <div class="who">Nusrat Jahan</div>
+                <div class="role">Verified Buyer</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="quote">Fast replies, real photos, and the coat looks even better in person. Already ordered twice.</p>
+            <div class="testimonial-person">
+              <div class="avatar-ring">S</div>
+              <div>
+                <div class="who">Shuvo Karim</div>
+                <div class="role">Verified Buyer</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="quote">Feels like a genuinely premium brand — the dark packaging, the fit, all of it.</p>
+            <div class="testimonial-person">
+              <div class="avatar-ring">M</div>
+              <div>
+                <div class="who">Mim Akter</div>
+                <div class="role">Verified Buyer</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= NEWSLETTER ============================= -->
+  <section class="section-pad" style="padding-top:0;">
+    <div class="container">
+      <div class="offer-banner" data-reveal="up">
+        <p class="eyebrow" style="justify-content:center;">Stay In The Loop</p>
+        <h2>Join The <span class="gradient-text">XOVA</span> List</h2>
+        <p>New drops, styling notes, and early access to sales — no spam, ever.</p>
+        <form id="newsletter-form" class="newsletter-form" style="max-width:420px; margin-inline:auto;">
+          <input type="email" placeholder="you@email.com" required aria-label="Email address">
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================= FOOTER ============================= -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo">XO<span>VA</span></a>
+        <p>Premium fashion for everyone. Designed with intention, ordered with a message.</p>
+        <div class="social-row">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://wa.me/8801344631271" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#collections">Collections</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><i class="fa-solid fa-envelope"></i> xovashopping@gmail.com</li>
+          <li><i class="fa-solid fa-phone"></i> +8801344631271</li>
+          <li><i class="fa-brands fa-whatsapp"></i> +8801344631271</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p style="font-size:0.85rem; color:var(--c-text-dim);">Get new arrivals in your inbox first.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); this.reset();">
+          <input type="email" placeholder="Email address" required aria-label="Email address">
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> XOVA. All rights reserved.</span>
+      <span>Crafted with intention.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================= CART SIDEBAR ============================= -->
+<div class="cart-overlay" id="cart-overlay"></div>
+<aside class="cart-sidebar" id="cart-sidebar" aria-label="Shopping cart">
+  <div class="cart-head">
+    <h3><i class="fa-solid fa-bag-shopping"></i> Your Cart</h3>
+    <button class="cart-close" data-cart-close aria-label="Close cart"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="cart-items" id="cart-items"><!-- rendered by script.js --></div>
+  <div class="cart-foot">
+    <div class="cart-subtotal-row"><span>Subtotal</span><span id="cart-subtotal">৳0</span></div>
+    <div class="cart-total-row"><span>Total</span><span id="cart-total">৳0</span></div>
+    <button class="btn btn-primary btn-block" id="checkout-btn" disabled>
+      <i class="fa-brands fa-whatsapp"></i> Order Now via WhatsApp
+    </button>
+    <p class="cart-note">No online payment — confirm your order directly on WhatsApp.</p>
+  </div>
+</aside>
+
+<!-- ============================= ORDER MODAL ============================= -->
+<div class="modal-overlay" id="order-modal">
+  <div class="modal-box">
+    <h3>Confirm Your Details</h3>
+    <p class="hint">We'll open WhatsApp with your order pre-filled — just hit send.</p>
+    <form id="order-form">
+      <div class="form-group">
+        <label for="order-name">Full Name</label>
+        <input type="text" id="order-name" required placeholder="Your name">
+      </div>
+      <div class="form-group">
+        <label for="order-address">Delivery Address</label>
+        <textarea id="order-address" rows="3" required placeholder="House, road, area, city"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="order-phone">Phone Number</label>
+        <input type="tel" id="order-phone" required placeholder="01XXXXXXXXX">
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-ghost btn-block" data-modal-close>Cancel</button>
+        <button type="submit" class="btn btn-primary btn-block"><i class="fa-brands fa-whatsapp"></i> Send Order</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- ============================= FLOATING ELEMENTS ============================= -->
+<button class="whatsapp-bubble" id="whatsapp-bubble" aria-label="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</button>
+<button class="scroll-top-btn" id="scroll-top-btn" aria-label="Scroll to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
