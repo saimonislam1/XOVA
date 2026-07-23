@@ -497,6 +497,7 @@ I want to order:
 ${lines}
 
 Order Total: ${formatPrice(cartSubtotal())}
+Delivery Charge: FREE
 
 My Name: ${name}
 My Address: ${address}
